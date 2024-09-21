@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Suscripción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1 class="gradient-text">Transforma tu futuro</h1>
+        <p>Únete a nuestro boletín y mantente informado sobre nuestras ofertas de posgrado y los últimos avances en la industria.</p>
+
+        <form id="subscriptionForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Daniel" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Gaviria" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="daniel.gaviria@prueba.com" required>
+
+            <label for="whatsapp">WhatsApp:</label>
+            <div class="whatsapp-field">
+                <select id="codigoPais" name="codigoPais" required>
+                    <option value="+57">+57</option>
+                    
+                </select>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="3001234567" required>
+            </div>
+
+            <label for="programa">Programa de interés:</label>
+            <select id="programa" name="programa" required>
+                <option value="" disabled selected>Selecciona un programa</option>
+                <option value="posgrado_negocios_internacionales">Posgrado en Negocios Internacionales</option>
+                <option value="posgrado_marketing_digital">Posgrado en Marketing Digital</option>
+                <option value="posgrado_finanzas_corporativas">Posgrado en Finanzas Corporativas</option>
+                <option value="posgrado_gestion_ti">Posgrado en Gestión de TI</option>
+                <option value="posgrado_data_analytics">Posgrado en Data Analytics</option>
+                <option value="posgrado_transformacion_digital">Posgrado en Transformación Digital</option>
+            </select>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                <label for="consentimiento">Consiento y autorizo el uso de mis datos personales.</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>¡Todo listo!</h2>
+            <p>Tu suscripción ha sido procesada. Estás listo para recibir contenido especializado que impulsará tu desarrollo profesional.</p>
+            <button onclick="closePopup()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
+
